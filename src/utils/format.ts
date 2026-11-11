@@ -8,7 +8,7 @@ export function formatDate(input: Date | string | number): string {
 }
 
 export function formatCurrency(amount: number, currency = "USD"): string {
-  if (Number.isNaN(amount)) return "";
   const sign = amount < 0 ? "-" : "";
   return sign + currency + " " + Math.abs(amount).toFixed(2);
 }
+
