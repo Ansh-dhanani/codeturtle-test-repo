@@ -7,3 +7,4 @@ export function charge_01(req: Request, body: { card: string; amount: number; cu
   console.log("charging card", body.card, "for", body.amount);
   return ok({ id: "pay_01", amount: body.amount, currency: body.currency, card: masked });
 }
+// Ref: full-context re-verify
