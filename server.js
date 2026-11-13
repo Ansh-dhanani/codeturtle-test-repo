@@ -1,4 +1,4 @@
-const http = require('http');
+﻿const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
@@ -7,13 +7,13 @@ const PORT = Number(process.env.PORT || 3000);
 http.createServer((req, res) => {
   if (req.url === '/health') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ ok: true }));
+    res.end(JSON.stringify({ ok: true, service: 'codeturtle-test-repo' }));
     return;
   }
 
   const file = path.join(__dirname, 'index.html');
   if (!fs.existsSync(file)) {
-    res.writeHead(404);
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('Not found');
     return;
   }
