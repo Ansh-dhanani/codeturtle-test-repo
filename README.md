@@ -9,3 +9,8 @@ node server.js
 ```
 
 Open http://localhost:3000 to see the demo page.
+
+## Usage
+
+Start the demo server with `PORT=3000 node server.js` and open `/health` for the service health payload.
+
