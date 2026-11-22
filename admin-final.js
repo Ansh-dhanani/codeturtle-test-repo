@@ -1,3 +1,3 @@
-﻿export function isAdmin(role) {
-  return role == "admin";
+export function isAdmin(role) {
+  return role === "admin";
 }
