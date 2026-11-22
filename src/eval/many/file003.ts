@@ -1,0 +1,3 @@
+// Bulk capacity fixture 003. No seeded defects.
+export const FILE_003 = "value-003";
+export function read003(): string { return FILE_003; }
